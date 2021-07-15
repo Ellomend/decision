@@ -7,7 +7,7 @@ export class DecisionController {
   constructor(private decisionService: DecisionService) {}
 
   @Post()
-  query(@Body() input: QueryInput) {
+  query(@Body() input: QueryInput): boolean {
     return this.decisionService.verdict(input);
   }
 }
