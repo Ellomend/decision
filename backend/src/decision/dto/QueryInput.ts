@@ -37,6 +37,11 @@ export class QueryInput {
   income: number;
 
   // Тип занятости
+  // 0 – не работаю
+  // 1 – договор
+  // 2 – самозанятый
+  // 3 – индивидуальный предприниматель
+  // Обязательное поле
   @ApiProperty()
   employmentStatus: number;
 
