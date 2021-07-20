@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { QueryInput } from './dto/QueryInput';
+import { computeWeight, makeWeightedDecision } from "./decison/rules/compute";
 
 @Injectable()
 export class DecisionService {
@@ -7,11 +8,11 @@ export class DecisionService {
     return this.makeDecision(this.calculateWeight(input));
   }
 
-  calculateWeight(input: QueryInput) {
-    return 10;
+  calculateWeight(input: QueryInput): number {
+    return computeWeight(input);
   }
 
-  makeDecision(weight: number) {
-    return !!(weight / 2);
+  makeDecision(weight: number): boolean {
+    return makeWeightedDecision(weight)
   }
 }
