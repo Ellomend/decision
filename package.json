@@ -5,6 +5,6 @@
     "apistart": "cd backend && npm run start:dev",
     "frontstart": "cd frontend && npx quasar dev"
   },
-  "dependencies": {
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

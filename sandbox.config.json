@@ -1,0 +1,6 @@
+{
+  "view": "terminal",
+  "container": {
+    "node":"14"
+  }
+}
